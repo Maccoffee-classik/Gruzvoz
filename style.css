@@ -36,6 +36,28 @@ body {
   font-weight: 600 !important;
 }
 
+.offcanvas {
+  width: 280px;
+  background: #fff;
+  padding: 1rem;
+}
+.offcanvas .offcanvas-header {
+  border-bottom: 1px solid #e9ecef;
+}
+.offcanvas .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 0;
+  color: #000;
+}
+.offcanvas .nav-link:hover {
+  color: #007bff;
+}
+.offcanvas .btn-primary {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .hero-section {
   background: #f2f5fa;
   padding: 2rem 0;

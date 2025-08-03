@@ -30,6 +30,33 @@ body {
 .fw-medium { font-weight: 500 !important; }
 .fw-semibold { font-weight: 600 !important; }
 
+
+// Offcanvas меню
+.offcanvas {
+  width: 280px;
+  background: #fff;
+  padding: 1rem;
+
+  .offcanvas-header {
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.75rem 0;
+    color: #000;
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .btn-primary {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
 // Секция героя с фоновой картинкой
 .hero-section {
   background: #f2f5fa;

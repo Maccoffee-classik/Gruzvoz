@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap');
+
+// Базовые стили
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+.header {
+  background: #f2f5fa;
+}
+.logo-gruzovoz-header {
+  max-width: 143px;
+}
+
+// Стили бренда (логотипа)
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navbar-brand small {
+  font-weight: 500;
+  color: #6c757d; /* muted */
+  line-height: 1;
+}
+
+// Дополнительные классы для веса шрифта Raleway
+.fw-black { font-weight: 900 !important; }
+.fw-medium { font-weight: 500 !important; }
+.fw-semibold { font-weight: 600 !important; }
+
+// Секция героя с фоновой картинкой
+.hero-section {
+  background: #f2f5fa;
+  .container {
+    background: url('img/main-bg.png') center center/cover no-repeat;
+    border-radius: 16px;
+    padding: 48px;
+  }
+
+  padding: 2rem 0;
+}
+
+// Блок с содержимым на фоне (белый фон, скругление, тень)
+.hero-content {
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 32px;
+}
+
+// Стили заголовков и текста в hero-секции
+.hero-section h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.hero-section h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+.hero-section .hero-description {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+// Адаптивные размеры текста (пример)
+@media (max-width: 767.98px) {
+  .hero-section h1 { font-size: 2rem; }
+  .hero-section h2 { font-size: 1.5rem; }
+}
+@media (min-width: 992px) {
+  .hero-section h1 { font-size: 3rem; }
+  .hero-section h2 { font-size: 2rem; }
+}
+
+// Ограничение ширины контейнера на больших экранах (макс 1280px)
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px;
+  }
+}

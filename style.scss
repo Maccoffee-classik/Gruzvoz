@@ -264,7 +264,223 @@ body {
 
 
 
+// Секция cta
+.cta {
+  background: $blue-600;
+  padding: 64px 0;
 
+  &__container {
+    max-width: 1280px;
+  }
+
+  &__text {
+    p {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 117%;
+      color: $dark-000;
+    }
+  }
+
+  &__button {
+    background: $dark-000;
+    border: 1px solid $blue-500;
+    border-radius: 8px;
+    padding: 16px;
+
+    transition: all 0.3s ease;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 137%;
+    color: $blue-600;
+
+    &:hover {
+      background-color: transparent;
+      color:  $dark-000;
+      border: 1px solid  $dark-000;
+      svg path {
+        stroke: #fff; // Цвет обводки становится белым
+      }
+    }
+  }
+}
+
+
+
+
+// Адаптивность
+@media (max-width: 768px) {
+  .cta {
+    text-align: center;
+    &__text {
+      margin-bottom: 15px;
+      p {
+        font-size: 0.95rem;
+      }
+    }
+    &__button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+
+
+// секция advantages
+.advantages {
+  background: $-blue-bg;
+  padding: 32px 0;
+
+  &__container {
+    max-width: 1280px;
+  }
+
+  &__row {
+    margin-bottom: 40px;
+  }
+  &__left {
+    padding-right: 0;
+  }
+  &__right {
+    padding-left: 24px;
+  }
+
+  &__card {
+    background:$blue-600;
+    border-radius: 16px;
+    padding: 32px 24px;
+    color: #fff;
+
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 129%;
+    color: $dark-000;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color:$dark-000;
+    margin-bottom: 24px;
+  }
+
+    &__button {
+      background: $dark-000;
+      border: 1px solid $blue-500;
+      border-radius: 8px;
+      padding: 16px;
+
+      transition: all 0.3s ease;
+
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 137%;
+      color: $blue-600;
+
+      &:hover {
+        background-color: transparent;
+        color:  $dark-000;
+        border: 1px solid  $dark-000;
+        svg path {
+          stroke: #fff; // Цвет обводки становится белым
+        }
+      }
+    }
+
+  &__image img {
+    border-radius: 16px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  &__list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__features {
+    padding-right: 24px;
+  }
+  &__item,
+  &__feature {
+    padding: 24px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color:$dark-800;
+    strong {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 133%;
+      color: $dark-900;
+    }
+    p {
+      margin-bottom: 0;}
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #0d6efd;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  &__feature {
+    margin-bottom: 10px;
+
+    &--full {
+      align-items: flex-start;
+    }
+  }
+  &__notes {
+    padding-left: 0;
+  }
+  &__note {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: $dark-000;
+    border-radius: 16px;
+    background: $blue-600;
+
+    padding: 32px 24px;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 992px) {
+  .advantages {
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__row {
+      margin-bottom: 20px;
+    }
+    &__note {
+      margin-top: 20px;
+    }
+  }
+}
 
 
 

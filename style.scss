@@ -95,12 +95,16 @@ body {
 .hero-section {
   background: #f2f5fa;
   .container {
-    background: url('img/main-bg.png') center center/cover no-repeat;
+    max-width: 1280px;
+    width: 100%;
+  }
+  &__inner {
+    background: url('img/main-bg.png') center center / cover no-repeat;
     border-radius: 16px;
     padding: 48px;
+    overflow: hidden;
   }
 
-  padding: 2rem 0;
 }
 
 // Блок с содержимым на фоне (белый фон, скругление, тень)
@@ -143,6 +147,153 @@ body {
   line-height: 137%;
   color: $dark-500;
   margin-bottom: 32px;
+}
+
+//Секция Consultation
+.consultation {
+  /* Светлый фон для всей секции */
+  background: 	$-blue-bg;
+  padding: 64px 0;
+  /* Контейнер ограниченной ширины (макс. 1280px на широком экране) */
+  &__container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* Карточки преимуществ (левая колонка) */
+  &__benefit {
+    background: $dark-000;
+    border-radius: 16px;
+    padding: 24px;
+    height: 100%;
+    min-height: 200px;
+
+    &-icon {
+      border-radius: 8px;
+      padding: 10px 12px;
+      width: 56px;
+      height: 56px;
+      display: block;
+      background: $blue-400;/* синий фон для иконки-заглушки */
+
+    }
+    &-text {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 133%;
+      color: $dark-900;
+      margin-top: 24px;
+    }
+  }
+  /* Блок формы (правая колонка) */
+  &__form-block {
+
+  }
+  &__form-inner {
+    background: $blue-200;
+    border-radius: 16px;
+    padding: 32px;
+    height: 100%;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 129%;
+    color: $dark-900;
+    margin-bottom: 12px;
+  }
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 137%;
+    color: $dark-900;
+    margin-bottom: 24px;
+  }
+  .form-floating {
+    margin-bottom: 12px;}
+  &__input {
+    border: 1px solid $blue-200;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 137%;
+    color: $dark-500;
+
+    .form-control {
+      background-color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 1.2rem 1rem 0.45rem;
+      font-size: 16px;
+      height: auto;
+      color: #1e1e1e;
+
+      &::placeholder {
+        color: transparent; // скрываем placeholder
+      }
+
+      &:focus {
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    label {
+      color: #adb5bd;
+      font-size: 14px;
+      padding: 0.45rem 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .form-control:focus ~ label,
+    .form-control:not(:placeholder-shown) ~ label {
+      font-size: 13px;
+      transform: translateY(-0.35rem) scale(0.85);
+      color: #adb5bd;
+    }
+  }
+  &__checkbox {
+    /* Галочка чекбокса в фирменном синем цвете при выделении */
+    accent-color: #0d6efd;
+  }
+  &__checkbox-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color: $dark-900;
+  }
+  &__policy-link {
+    color: $blue-600;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underlinee;
+    }
+  }
+  /* Кнопка отправки заявки */
+  &__submit-btn {
+    background: $dark-900;
+    border: 1px solid $dark-900;
+    border-radius: 8px;
+    padding: 16px;
+
+    transition: all 0.3s ease;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 137%;
+    color: $dark-000;
+
+    &:hover {
+      background :$dark-000;
+      color:  $dark-900;
+      border: 1px solid  $dark-900;
+      svg path {
+        stroke: $dark-900; // Цвет обводки становится белым
+      }
+    }
+  }
+
 }
 
 // Секция relocation

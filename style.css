@@ -70,12 +70,16 @@ body {
 
 .hero-section {
   background: #f2f5fa;
-  padding: 2rem 0;
 }
 .hero-section .container {
+  max-width: 1280px;
+  width: 100%;
+}
+.hero-section__inner {
   background: url("img/main-bg.png") center center/cover no-repeat;
   border-radius: 16px;
   padding: 48px;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -116,6 +120,139 @@ body {
   line-height: 137%;
   color: #737d86;
   margin-bottom: 32px;
+}
+
+.consultation {
+  /* Светлый фон для всей секции */
+  background: #f2f5fa;
+  padding: 64px 0;
+  /* Контейнер ограниченной ширины (макс. 1280px на широком экране) */
+  /* Карточки преимуществ (левая колонка) */
+  /* Блок формы (правая колонка) */
+  /* Кнопка отправки заявки */
+}
+.consultation__container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+.consultation__benefit {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+  min-height: 200px;
+}
+.consultation__benefit-icon {
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 56px;
+  height: 56px;
+  display: block;
+  background: #7fb4f4; /* синий фон для иконки-заглушки */
+}
+.consultation__benefit-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  color: #181b21;
+  margin-top: 24px;
+}
+.consultation__form-inner {
+  background: #dcecfb;
+  border-radius: 16px;
+  padding: 32px;
+  height: 100%;
+}
+.consultation__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 129%;
+  color: #181b21;
+  margin-bottom: 12px;
+}
+.consultation__description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 137%;
+  color: #181b21;
+  margin-bottom: 24px;
+}
+.consultation .form-floating {
+  margin-bottom: 12px;
+}
+.consultation__input {
+  border: 1px solid #dcecfb;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 137%;
+  color: #737d86;
+}
+.consultation__input .form-control {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 1.2rem 1rem 0.45rem;
+  font-size: 16px;
+  height: auto;
+  color: #1e1e1e;
+}
+.consultation__input .form-control::placeholder {
+  color: transparent;
+}
+.consultation__input .form-control:focus {
+  box-shadow: none;
+  border: none;
+}
+.consultation__input label {
+  color: #adb5bd;
+  font-size: 14px;
+  padding: 0.45rem 1rem;
+  transition: all 0.2s ease;
+}
+.consultation__input .form-control:focus ~ label,
+.consultation__input .form-control:not(:placeholder-shown) ~ label {
+  font-size: 13px;
+  transform: translateY(-0.35rem) scale(0.85);
+  color: #adb5bd;
+}
+.consultation__checkbox {
+  /* Галочка чекбокса в фирменном синем цвете при выделении */
+  accent-color: #0d6efd;
+}
+.consultation__checkbox-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: #181b21;
+}
+.consultation__policy-link {
+  color: #0d5dbc;
+  text-decoration: none;
+  cursor: pointer;
+}
+.consultation__policy-link:hover {
+  text-decoration: underlinee;
+}
+.consultation__submit-btn {
+  background: #181b21;
+  border: 1px solid #181b21;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 137%;
+  color: #fff;
+}
+.consultation__submit-btn:hover {
+  background: #fff;
+  color: #181b21;
+  border: 1px solid #181b21;
+}
+.consultation__submit-btn:hover svg path {
+  stroke: #181b21;
 }
 
 .relocation {

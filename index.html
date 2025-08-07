@@ -12,6 +12,7 @@
     <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 </head>
+<script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
 
 <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -95,6 +96,7 @@
 <main>
     <section class="hero-section">
         <div class="container">
+            <div class="hero-section__inner">
             <div class="row">
                 <div class="col-12 col-md-9 col-lg-7">
                     <div class="hero-content ">
@@ -112,7 +114,104 @@
                     </div>
                 </div>
             </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="consultation">
+        <div class="container consultation__container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 consultation__advantages">
+                    <div class="row g-4 consultation__benefits">
+                        <div class="col-12 col-md-6 ">
+                            <div class="consultation__benefit">
+                            <div class="consultation__benefit-icon">
+                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.2276 6.51952H26.9343M1.06616 6.52017H10.7728M17.2276 19.4401H26.9343M17.2276 27.5195H26.9343M22.1192 11.36V1.66666M1.06616 28.3333L10.7728 18.64M10.7728 28.3333L1.06616 18.64" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="consultation__benefit-text">Выезд оценщика в день обращения</div>
+                        </div>
+                        </div>
+                        <div class="col-12 col-md-6 ">
+                            <div class="consultation__benefit">
+                            <div class="consultation__benefit-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.0001 17.6667H16.3334C17.8001 17.6667 19.0001 16.4667 19.0001 15M19.0001 15V1.66666H7.00008C5.00008 1.66666 3.25343 2.77331 2.34676 4.39997M19.0001 15L19.0001 5.66666H21.4534C22.4134 5.66666 23.2934 6.18667 23.7734 7.01334L26.0534 11M1.66675 21.6667C1.66675 23.88 3.45341 25.6667 5.66675 25.6667H7.00008M7.00008 25.6667C7.00008 24.2 8.20008 23 9.66675 23M7.00008 25.6667C7.00008 27.1394 8.19399 28.3333 9.66675 28.3333C11.1395 28.3333 12.3334 27.1394 12.3334 25.6667M7.00008 25.6667C7.00008 24.1939 8.19399 23 9.66675 23M9.66675 23C11.1334 23 12.3334 24.2 12.3334 25.6667M9.66675 23C11.1395 23 12.3334 24.1939 12.3334 25.6667M12.3334 25.6667H17.6667M17.6667 25.6667C17.6667 24.2 18.8667 23 20.3334 23M17.6667 25.6667C17.6667 27.1394 18.8607 28.3333 20.3334 28.3333C21.8062 28.3333 23.0001 27.1394 23.0001 25.6667M17.6667 25.6667C17.6667 24.1939 18.8607 23 20.3334 23M20.3334 23C21.8001 23 23.0001 24.2 23.0001 25.6667M20.3334 23C21.8062 23 23.0001 24.1939 23.0001 25.6667M23.0001 25.6667H24.3334C26.5467 25.6667 28.3334 23.88 28.3334 21.6667V17.6667M28.3334 17.6667H24.3334C23.6001 17.6667 23.0001 17.0667 23.0001 16.3333V12.3333C23.0001 11.6 23.6001 11 24.3334 11H26.0534M28.3334 17.6667L28.3334 15L26.0534 11M1.66675 9.66666H9.66675M1.66675 13.6667H7.00008M1.66675 17.6667H4.33341" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                            <div class="consultation__benefit-text">Перевозим и контролируем 24 часа в сутки</div>
+                        </div>
+                        </div>
+                        <div class="col-12 col-md-6 ">
+                            <div class="consultation__benefit">
+                            <div class="consultation__benefit-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2266 28.08C11.7199 27.28 11.9999 26.3333 11.9999 25.3333C11.9999 22.3867 9.61325 20 6.66659 20M11.2266 28.08C10.3066 29.6267 8.61325 30.6667 6.66659 30.6667C4.71992 30.6667 3.02659 29.6267 2.10659 28.08C1.61325 27.28 1.33325 26.3333 1.33325 25.3333C1.33325 22.3867 3.71992 20 6.66659 20M11.2266 28.08C10.9466 28.56 10.5868 28.9867 10.1735 29.3333H22.6668C26.6668 29.3333 29.3335 26.6667 29.3335 22.6667V16C29.3335 12.3467 27.1068 9.79999 23.6668 9.39999C23.3468 9.34666 23.0135 9.33334 22.6668 9.33334H9.33351C8.96018 9.33334 8.60018 9.36 8.25351 9.41334C4.85351 9.84 2.66685 12.3733 2.66685 16V21.8133C3.64018 20.7067 5.06659 20 6.66659 20M4.58853 25.3327L5.90853 26.6527L8.74853 24.0261M29.3335 16.6667H25.3335C23.8668 16.6667 22.6668 17.8667 22.6668 19.3333C22.6668 20.8 23.8668 22 25.3335 22H29.3335M23.6685 9.39995C23.3485 9.34662 23.0151 9.3333 22.6685 9.3333H9.33513C8.9618 9.3333 8.60179 9.35997 8.25513 9.4133C8.44179 9.03997 8.70846 8.69334 9.02846 8.37334L13.3618 4.02666C15.1885 2.21333 18.1485 2.21333 19.9751 4.02666L22.3085 6.38661C23.1618 7.22661 23.6151 8.29329 23.6685 9.39995Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                            <div class="consultation__benefit-text">Оплата по наличному и безналичному расчёту, с НДС</div>
+                        </div>
+                        </div>
+                        <div class="col-12 col-md-6 ">
+                            <div class="consultation__benefit">
+                            <div class="consultation__benefit-icon"><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.33325 23V13.6667M10.6666 23V13.6667M15.9999 23V13.6667M21.3333 23V13.6667M26.6666 23V13.6667M1.33325 28.3333H30.6666M16.4932 1.86671L28.4932 6.66667C28.9599 6.85334 29.3333 7.41333 29.3333 7.90666V12.3333C29.3333 13.0667 28.7333 13.6667 27.9999 13.6667H3.99992C3.26659 13.6667 2.66659 13.0667 2.66659 12.3333V7.90666C2.66659 7.41333 3.03993 6.85334 3.50659 6.66667L15.5066 1.86671C15.7733 1.76004 16.2266 1.76004 16.4932 1.86671ZM29.3333 28.3333H2.66659V24.3333C2.66659 23.6 3.26659 23 3.99992 23H27.9999C28.7333 23 29.3333 23.6 29.3333 24.3333V28.3333ZM17.9999 8.33334C17.9999 9.43791 17.1045 10.3333 15.9999 10.3333C14.8953 10.3333 13.9999 9.43791 13.9999 8.33334C13.9999 7.22877 14.8953 6.33334 15.9999 6.33334C17.1045 6.33334 17.9999 7.22877 17.9999 8.33334Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                            <div class="consultation__benefit-text">Работаем в сфере офисных переездов с 2011 года</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 consultation__form-block">
+                    <div class="consultation__form-inner">
+                    <h2 class="consultation__title">Бесплатная консультация</h2>
+                    <p class="consultation__description">Более <b>70% </b>наших клиентов выбирают нас после звонка. Оставьте заявку, и у вас не останется сомнений в нашем профессионализме.</p>
+                    <form class="consultation__form" action="#" method="post">
+                        <div class="form-floating ">
+                            <input
+                                    type="text"
+                                    class="form-control consultation__input"
+                                    id="consultation-name"
+                                    placeholder="Имя"
+                                    required
+                            >
+                            <label for="consultation-name">Имя</label>
+                        </div>
+
+                        <div class="form-floating ">
+                            <input
+                                    type="tel"
+                                    class="form-control consultation__input phone-mask"
+                                    id="consultation-phone"
+                                    placeholder="+7 (999) 999-99-99"
+                                    required
+                            >
+                            <label for="consultation-phone">Телефон</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input
+                                    type="checkbox"
+                                    class="form-check-input consultation__checkbox"
+                                    id="consultation-consent"
+                                    required
+                            >
+                            <label class="form-check-label consultation__checkbox-label" for="consultation-consent">
+                                Я согласен(а) с&nbsp;условиями
+                                <a href="#" class="consultation__policy-link">политики конфиденциальности</a>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-dark consultation__submit-btn d-inline-flex align-items-center">
+                            Оставить заявку
+                            <span class="ms-2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.74 15.53L14.26 12L10.74 8.47M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+                        </button>
+                    </form>
+                </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -528,6 +627,10 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        Inputmask("+7 (999) 999-99-99").mask(document.querySelectorAll(".phone-mask"));
+    });
+</script>
 </body>
 </html>

@@ -255,6 +255,137 @@ body {
   stroke: #181b21;
 }
 
+.steps {
+  padding: 64px 0;
+}
+.steps__item-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.steps__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.steps__arrow {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  z-index: 1;
+}
+.steps__arrow--down {
+  top: auto;
+  bottom: -12px;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+.steps__arrow--left {
+  position: absolute;
+  transform: translateY(-50%) rotate(179deg);
+  right: -24px;
+}
+.steps__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.steps__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+.steps__col {
+  flex: 0 0 calc(20% - 12px);
+  max-width: calc(20% - 12px);
+  display: flex;
+  justify-content: center;
+}
+.steps__item {
+  background: #f2f5fa;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: start;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 232px;
+  min-width: 228px;
+}
+@media (max-width: 1400px) {
+  .steps__item {
+    min-width: 204px;
+  }
+}
+@media (max-width: 1200px) {
+  .steps__item {
+    min-width: auto;
+  }
+}
+.steps__number {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  background: #fff;
+  border-radius: 8px;
+  width: 56px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 117%;
+  color: #181b21;
+  margin-bottom: auto;
+}
+.steps__icon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.steps__text {
+  font-size: 14px;
+  color: #1e1e1e;
+  font-weight: 500;
+}
+.steps__arrow-down {
+  margin: 20px 0;
+}
+.steps__arrow-down svg {
+  transform: rotate(90deg);
+}
+@media (max-width: 992.98px) {
+  .steps__col {
+    flex: 0 0 calc(50% - 0.6rem);
+    max-width: calc(50% - 0.6rem);
+  }
+}
+@media (max-width: 767.98px) {
+  .steps__col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .steps__item {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+  }
+  .steps__number {
+    font-size: 16px;
+  }
+  .steps__text {
+    font-size: 14px;
+  }
+}
+
 .relocation {
   background-color: #f2f5fa;
   padding: 60px 0;

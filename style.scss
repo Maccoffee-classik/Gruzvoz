@@ -267,7 +267,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     &:hover {
-      text-decoration: underlinee;
+      text-decoration: underline;
     }
   }
   /* Кнопка отправки заявки */
@@ -629,12 +629,104 @@ body {
   }
 }
 
+//секция services
 
+
+
+.services {
+  background: $-blue-bg;
+  padding: 64px 0;
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 129%;
+    color: $dark-900;
+    margin-bottom: 12px;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    color: $dark-900;
+    margin-bottom: 24px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .services__card {
+      flex: 0 0 auto; // фиксируем ширину по процентам
+    }
+
+    // Первая строка
+    .services__card:nth-child(1) {
+      width: 32%;
+    }
+    .services__card:nth-child(2) {
+      width: 37%;
+    }
+    .services__card:nth-child(3) {
+      width: 24%;
+    }
+
+    // Вторая строка — другие пропорции
+    .services__card:nth-child(4) {
+      width: calc(24% - 8px); // 50% минус половина gap
+    }
+    .services__card:nth-child(5) {
+      width: calc(33% - 8px);
+    }
+    .services__card:nth-child(6) {
+      width: 37%; // пример — если вторая строка не полная
+    }
+
+    .services__card:nth-child(7) {
+      width: calc(30% - 8px); // 50% минус половина gap
+    }
+    .services__card:nth-child(8) {
+      width: calc(37% - 8px);
+    }
+    .services__card:nth-child(9) {
+      width: 27%; // пример — если вторая строка не полная
+    }
+  }
+
+  &__card {
+    background: $blue-200;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: left;
+
+    &-icon {
+      border-radius: 8px;
+      padding: 10px 12px;
+      width: 56px;
+      height: 56px;
+      background: $dark-000;
+      margin-bottom: 24px;
+    }
+
+    &-subtitle {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 133%;
+      color: $dark-900;
+    }
+  }
+}
 
 // секция advantages
 .advantages {
   background: $-blue-bg;
-  padding: 32px 0;
+  padding: 0px 0 64px;
 
   &__container {
     max-width: 1280px;
@@ -961,7 +1053,256 @@ body {
   }
 }
 
+
+//Секция FAQ (desktop)
+.faq {
+  background: $-blue-bg;
+  padding: 64px 0;
+
+  &__container {
+    max-width: 1280px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 129%;
+    color:$dark-900;
+    margin-bottom: 24px;
+  }
+
+  &__panel {
+    background:$dark-000;
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  /* Список */
+  &__list {
+    margin: 0;
+  }
+}
+
+/* Элемент */
+.faq-item {
+  border: 0;
+  border-bottom: 1px solid $blue-200;
+
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__head {
+    margin: 0;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 24px 0 24px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    color: $dark-900;
+
+    /* убираем фокус Bootstrap */
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    /* стрелка */
+    .faq-item__chevron {
+      display: inline-flex;
+      transition: transform .2s ease-in-out;
+    }
+
+    &.collapsed .faq-item__chevron {
+      transform: rotate(180deg); /* вниз */
+    }
+  }
+
+  &__body {
+    padding: 0 0 24px;
+    margin-top: -16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: $dark-800;
+  }
+}
+
+//Секция ready
+
+.ready {
+  background:  $-blue-bg;
+  padding: 0px;
+
+  &__card {
+    background: $blue-600;
+    border-radius: 16px;
+    padding: 32px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 129%;
+    color: $dark-000;
+    margin: 0 0 12px;
+  }
+
+  &__lead {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 137%;
+    color: $dark-000;
+    margin: 0 0 32px;
+  }
+  .form-floating {
+    margin-bottom: 12px;
+  }
+  .form-floating>label {
+    color: #737d86;}
+  /* Поля */
+  &__input,
+  &__textarea {
+    border: 1px solid $blue-200;
+    background: $dark-000;
+    border: none;
+    border-radius: 8px;
+    color: $dark-900;
+    font-size: 16px;
+    padding: 14px 16px;
+    box-shadow: none;
+
+    &::placeholder { color: #9aa6b2; }
+    &:focus { box-shadow: none; border: none; }
+  }
+
+  &__textarea {
+    min-height: 96px;
+    resize: vertical;
+  }
+
+  /* Маленький лейбл над полем телефона */
+  &__field { position: relative; }
+  &__field-label {
+    position: absolute;
+    left: 12px;
+    top: -10px;
+    background: $blue-600;
+    color: white;
+    padding: 0 6px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  /* Кастомный чекбокс с собственной галочкой */
+  .ready__check {
+    /* прячем стандартный вид */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 18px;
+    height: 18px;
+    background: $blue-200;
+    border: 2px solid #e3efff;         /* бордер под синий фон карточки */
+
+    border-radius: 4px;
+    display: inline-grid;
+    place-content: center;
+    cursor: pointer;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+    transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
+
+    /* доступность при фокусе с клавиатуры */
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* псевдоэлемент — сама галочка */
+    &::after {
+      content: "";
+      width: 12px;
+      height: 10px;
+      transform: scale(0);              /* прячем по умолчанию */
+      transition: transform .12s ease;
+      /* Вариант 1: через mask, цвет управляется currentColor */
+      background-color: currentColor;
+      color: #047AE9;                   /* цвет галочки */
+      -webkit-mask: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.7304 0.31701C12.1076 0.720412 12.0864 1.35322 11.683 1.73043L5.058 9.73043C4.67363 10.0898 4.07649 10.0899 3.69209 9.7305L0.317091 6.6405C-0.0863533 6.26334 -0.107659 5.63054 0.269504 5.22709C0.646666 4.82365 1.27947 4.80234 1.68292 5.1795L4.37493 7.63101L10.317 0.269579C10.7204 -0.107628 11.3532 -0.0863925 11.7304 0.31701Z'/%3E%3C/svg%3E") no-repeat center / contain;
+      mask: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.7304 0.31701C12.1076 0.720412 12.0864 1.35322 11.683 1.73043L5.058 9.73043C4.67363 10.0898 4.07649 10.0899 3.69209 9.7305L0.317091 6.6405C-0.0863533 6.26334 -0.107659 5.63054 0.269504 5.22709C0.646666 4.82365 1.27947 4.80234 1.68292 5.1795L4.37493 7.63101L10.317 0.269579C10.7204 -0.107628 11.3532 -0.0863925 11.7304 0.31701Z'/%3E%3C/svg%3E") no-repeat center / contain;
+    }
+
+    /* отмеченное состояние */
+    &:checked {
+      border-color: #fff;
+      background: #fff;
+    }
+    &:checked::after {
+      transform: scale(1);
+    }
+  }
+  /* чекбокс и политика */
+  &__check { accent-color: white; }
+  &__check-label {
+    color: $blue-300;
+    a { color: white; text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__policy { color: $dark-000}
+
+  /* Кнопка */
+  &__button {
+    margin-top: 32px;
+    background: $dark-000;
+    border: 1px solid $blue-500;
+    border-radius: 8px;
+    padding: 16px;
+
+    transition: all 0.3s ease;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 137%;
+    color: $blue-600;
+
+    &:hover {
+      background-color: transparent;
+      color:  $dark-000;
+      border: 1px solid  $dark-000;
+      svg path {
+        stroke: #fff; // Цвет обводки становится белым
+      }
+    }
+  }
+  /* Иллюстрация */
+  &__illustration {
+    margin-top: 85px;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+}
+
 //Секция contact-map
+
 
 .contact-map {
   background: $-blue-bg;

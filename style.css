@@ -233,7 +233,7 @@ body {
   cursor: pointer;
 }
 .consultation__policy-link:hover {
-  text-decoration: underlinee;
+  text-decoration: underline;
 }
 .consultation__submit-btn {
   background: #181b21;
@@ -532,9 +532,88 @@ body {
     justify-content: center;
   }
 }
+.services {
+  background: #f2f5fa;
+  padding: 64px 0;
+}
+.services__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.services__heading {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 129%;
+  color: #181b21;
+  margin-bottom: 12px;
+}
+.services__subtitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  color: #181b21;
+  margin-bottom: 24px;
+}
+.services__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.services__cards .services__card {
+  flex: 0 0 auto;
+}
+.services__cards .services__card:nth-child(1) {
+  width: 32%;
+}
+.services__cards .services__card:nth-child(2) {
+  width: 37%;
+}
+.services__cards .services__card:nth-child(3) {
+  width: 24%;
+}
+.services__cards .services__card:nth-child(4) {
+  width: calc(24% - 8px);
+}
+.services__cards .services__card:nth-child(5) {
+  width: calc(33% - 8px);
+}
+.services__cards .services__card:nth-child(6) {
+  width: 37%;
+}
+.services__cards .services__card:nth-child(7) {
+  width: calc(30% - 8px);
+}
+.services__cards .services__card:nth-child(8) {
+  width: calc(37% - 8px);
+}
+.services__cards .services__card:nth-child(9) {
+  width: 27%;
+}
+.services__card {
+  background: #dcecfb;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: left;
+}
+.services__card-icon {
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  margin-bottom: 24px;
+}
+.services__card-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  color: #181b21;
+}
+
 .advantages {
   background: #f2f5fa;
-  padding: 32px 0;
+  padding: 0px 0 64px;
 }
 .advantages__container {
   max-width: 1280px;
@@ -806,6 +885,233 @@ body {
   .order__description {
     font-size: 0.95rem;
   }
+}
+
+.faq {
+  background: #f2f5fa;
+  padding: 64px 0;
+  /* Список */
+}
+.faq__container {
+  max-width: 1280px;
+}
+.faq__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 129%;
+  color: #181b21;
+  margin-bottom: 24px;
+}
+.faq__panel {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+}
+.faq__list {
+  margin: 0;
+}
+
+/* Элемент */
+.faq-item {
+  border: 0;
+  border-bottom: 1px solid #dcecfb;
+}
+.faq-item:last-child {
+  border-bottom: 0;
+}
+.faq-item__head {
+  margin: 0;
+}
+.faq-item__btn {
+  width: 100%;
+  padding: 24px 0 24px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  color: #181b21;
+  /* убираем фокус Bootstrap */
+  /* стрелка */
+}
+.faq-item__btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+.faq-item__btn .faq-item__chevron {
+  display: inline-flex;
+  transition: transform 0.2s ease-in-out;
+}
+.faq-item__btn.collapsed .faq-item__chevron {
+  transform: rotate(180deg); /* вниз */
+}
+.faq-item__body {
+  padding: 0 0 24px;
+  margin-top: -16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  color: #444c53;
+}
+
+.ready {
+  background: #f2f5fa;
+  padding: 0px;
+  /* Поля */
+  /* Маленький лейбл над полем телефона */
+  /* Кастомный чекбокс с собственной галочкой */
+  /* чекбокс и политика */
+  /* Кнопка */
+  /* Иллюстрация */
+}
+.ready__card {
+  background: #0d5dbc;
+  border-radius: 16px;
+  padding: 32px;
+}
+.ready__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 129%;
+  color: #fff;
+  margin: 0 0 12px;
+}
+.ready__lead {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 137%;
+  color: #fff;
+  margin: 0 0 32px;
+}
+.ready .form-floating {
+  margin-bottom: 12px;
+}
+.ready .form-floating > label {
+  color: #737d86;
+}
+.ready__input, .ready__textarea {
+  border: 1px solid #dcecfb;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  color: #181b21;
+  font-size: 16px;
+  padding: 14px 16px;
+  box-shadow: none;
+}
+.ready__input::placeholder, .ready__textarea::placeholder {
+  color: #9aa6b2;
+}
+.ready__input:focus, .ready__textarea:focus {
+  box-shadow: none;
+  border: none;
+}
+.ready__textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+.ready__field {
+  position: relative;
+}
+.ready__field-label {
+  position: absolute;
+  left: 12px;
+  top: -10px;
+  background: #0d5dbc;
+  color: white;
+  padding: 0 6px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.ready .ready__check {
+  /* прячем стандартный вид */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #dcecfb;
+  border: 2px solid #e3efff; /* бордер под синий фон карточки */
+  border-radius: 4px;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  margin-right: 8px;
+  vertical-align: text-bottom;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  /* доступность при фокусе с клавиатуры */
+  /* псевдоэлемент — сама галочка */
+  /* отмеченное состояние */
+}
+.ready .ready__check:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.ready .ready__check::after {
+  content: "";
+  width: 12px;
+  height: 10px;
+  transform: scale(0); /* прячем по умолчанию */
+  transition: transform 0.12s ease;
+  /* Вариант 1: через mask, цвет управляется currentColor */
+  background-color: currentColor;
+  color: #047AE9; /* цвет галочки */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.7304 0.31701C12.1076 0.720412 12.0864 1.35322 11.683 1.73043L5.058 9.73043C4.67363 10.0898 4.07649 10.0899 3.69209 9.7305L0.317091 6.6405C-0.0863533 6.26334 -0.107659 5.63054 0.269504 5.22709C0.646666 4.82365 1.27947 4.80234 1.68292 5.1795L4.37493 7.63101L10.317 0.269579C10.7204 -0.107628 11.3532 -0.0863925 11.7304 0.31701Z'/%3E%3C/svg%3E") no-repeat center/contain;
+  mask: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.7304 0.31701C12.1076 0.720412 12.0864 1.35322 11.683 1.73043L5.058 9.73043C4.67363 10.0898 4.07649 10.0899 3.69209 9.7305L0.317091 6.6405C-0.0863533 6.26334 -0.107659 5.63054 0.269504 5.22709C0.646666 4.82365 1.27947 4.80234 1.68292 5.1795L4.37493 7.63101L10.317 0.269579C10.7204 -0.107628 11.3532 -0.0863925 11.7304 0.31701Z'/%3E%3C/svg%3E") no-repeat center/contain;
+}
+.ready .ready__check:checked {
+  border-color: #fff;
+  background: #fff;
+}
+.ready .ready__check:checked::after {
+  transform: scale(1);
+}
+.ready__check {
+  accent-color: white;
+}
+.ready__check-label {
+  color: #b7d7fd;
+}
+.ready__check-label a {
+  color: white;
+  text-decoration: none;
+}
+.ready__check-label a:hover {
+  text-decoration: underline;
+}
+.ready__policy {
+  color: #fff;
+}
+.ready__button {
+  margin-top: 32px;
+  background: #fff;
+  border: 1px solid #047ae9;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 137%;
+  color: #0d5dbc;
+}
+.ready__button:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.ready__button:hover svg path {
+  stroke: #fff;
+}
+.ready__illustration {
+  margin-top: 85px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .contact-map {

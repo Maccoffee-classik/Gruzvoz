@@ -556,6 +556,7 @@ body {
   margin-bottom: 24px;
 }
 .services__cards {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -564,31 +565,31 @@ body {
   flex: 0 0 auto;
 }
 .services__cards .services__card:nth-child(1) {
-  width: 32%;
+  width: calc(34.3% - 8px);
 }
 .services__cards .services__card:nth-child(2) {
-  width: 37%;
+  width: calc(39.19% - 8px);
 }
 .services__cards .services__card:nth-child(3) {
-  width: 24%;
+  width: calc(24.8% - 8px);
 }
 .services__cards .services__card:nth-child(4) {
-  width: calc(24% - 8px);
+  width: calc(30.19% - 8px);
 }
 .services__cards .services__card:nth-child(5) {
-  width: calc(33% - 8px);
+  width: calc(29.19% - 8px);
 }
 .services__cards .services__card:nth-child(6) {
-  width: 37%;
+  width: calc(39% - 8px);
 }
 .services__cards .services__card:nth-child(7) {
-  width: calc(30% - 8px);
+  width: calc(29.6% - 8px);
 }
 .services__cards .services__card:nth-child(8) {
   width: calc(37% - 8px);
 }
 .services__cards .services__card:nth-child(9) {
-  width: 27%;
+  width: calc(31.77% - 8px);
 }
 .services__card {
   background: #dcecfb;

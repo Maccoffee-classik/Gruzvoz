@@ -536,7 +536,10 @@ body {
 
 .relocation {
   background-color:$-blue-bg;
-  padding: 60px 0;
+  padding: 64px 0;
+  @media (max-width: 992px) {
+    padding: 40px 0 64px;
+  }
 
   &__container {
     max-width: 1280px;
@@ -548,6 +551,13 @@ body {
     line-height: 120%;
     color: $dark-900;
     margin-bottom: 24px;
+    @media (max-width: 992px) {
+      margin-top: 24px;
+    }
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
@@ -556,6 +566,11 @@ body {
     line-height: 133%;
     color: $dark-900;
     margin-bottom: 32px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 16px;
+
+    }
   }
 
   &__button {
@@ -567,6 +582,11 @@ body {
     font-size: 16px;
     line-height: 137%;
     color: $blue-600;
+    @media (max-width: 768px) {
+     width: 100%;
+      justify-content: center;
+
+    }
   }
 
   &__image {
@@ -579,6 +599,12 @@ body {
 
   &__steps {
     margin-top: 40px;
+    @media (max-width: 992px) {
+      margin-top: 32px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 16px;
+    }
   }
 
   &__step {
@@ -587,6 +613,11 @@ body {
     padding: 24px;
     margin-bottom: 16px;
     align-items: flex-start;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 24px 12px;
+      margin-bottom: 12px;
+    }
 
   }
   &__step-blue {
@@ -607,6 +638,7 @@ body {
     color: $blue-600;
     margin-right: 16px;
     flex-shrink: 0;
+
   }
 
   &__step-text {
@@ -614,39 +646,16 @@ body {
     font-size: 18px;
     line-height: 133%;
     color: $dark-900;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-top: 12px;
+    }
     p {
       margin: 0;
     }
   }
 }
 
-// Адаптивность
-@media (max-width: 992px) {
-  .relocation {
-    &__title {
-      font-size: 1.75rem;
-    }
-    &__text {
-      font-size: 0.95rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .relocation {
-    text-align: center;
-    &__image {
-      margin-top: 20px;
-    }
-    &__step {
-      flex-direction: column;
-      text-align: left;
-    }
-    &__step-number {
-      margin-bottom: 10px;
-    }
-  }
-}
 
 
 
@@ -654,6 +663,9 @@ body {
 .cta {
   background: $blue-600;
   padding: 64px 0;
+  @media (max-width: 768px) {
+    padding:40px 0;
+  }
 
   &__container {
     max-width: 1280px;
@@ -665,6 +677,10 @@ body {
       font-size: 24px;
       line-height: 117%;
       color: $dark-000;
+      @media (max-width: 768px) {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -680,6 +696,10 @@ body {
     font-size: 16px;
     line-height: 137%;
     color: $blue-600;
+    @media (max-width: 768px) {
+     width: 100%;
+     justify-content: center;
+    }
 
     &:hover {
       background-color: transparent;
@@ -695,22 +715,6 @@ body {
 
 
 
-// Адаптивность
-@media (max-width: 768px) {
-  .cta {
-    text-align: center;
-    &__text {
-      margin-bottom: 15px;
-      p {
-        font-size: 0.95rem;
-      }
-    }
-    &__button {
-      width: 100%;
-      justify-content: center;
-    }
-  }
-}
 
 //секция services
 
@@ -719,6 +723,9 @@ body {
 .services {
   background: $-blue-bg;
   padding: 64px 0;
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
   &__container {
     max-width: 1280px;
     margin: 0 auto;
@@ -753,33 +760,95 @@ body {
     // Первая строка
     .services__card:nth-child(1) {
       width: calc(34.3% - 8px);
+      @media (max-width: 992px) {
+        width: calc(50% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
     .services__card:nth-child(2) {
       width: calc(39.19% - 8px);
+      @media (max-width: 992px) {
+        width: calc(50% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
     .services__card:nth-child(3) {
       width: calc(24.8% - 8px);
+      @media (max-width: 992px) {
+        width: calc(60% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
 
     // Вторая строка — другие пропорции
     .services__card:nth-child(4) {
       width: calc(30.19% - 8px); // 50% минус половина gap
+      @media (max-width: 992px) {
+        width: calc(40% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
     .services__card:nth-child(5) {
       width: calc(29.19% - 8px);
+      @media (max-width: 992px) {
+        width: calc(40% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
     .services__card:nth-child(6) {
-      width: calc(39% - 8px); // пример — если вторая строка не полная
+      width: calc(39% - 8px);
+      // пример — если вторая строка не полная
+
+      @media (max-width: 992px) {
+        width: calc(60% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
 
     .services__card:nth-child(7) {
       width: calc(29.6% - 8px); // 50% минус половина gap
+      @media (max-width: 992px) {
+        width: calc(50% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
     .services__card:nth-child(8) {
       width: calc(37% - 8px);
+      @media (max-width: 992px) {
+        width: calc(50% - 8px);
+
+      }
+      @media (max-width: 768px) {
+        width:100%
+      }
     }
     .services__card:nth-child(9) {
       width: calc(31.77% - 8px); // пример — если вторая строка не полная
+      @media (max-width: 992px) {
+        width: 100%;
+
+      }
     }
   }
 
@@ -788,6 +857,9 @@ body {
     border-radius: 16px;
     padding: 32px 24px;
     text-align: left;
+    @media (max-width: 768px) {
+      padding: 24px 12px;
+    }
 
     &-icon {
       border-radius: 8px;
@@ -796,6 +868,10 @@ body {
       height: 56px;
       background: $dark-000;
       margin-bottom: 24px;
+      @media (max-width: 768px) {
+        margin-bottom: 12px;
+
+      }
     }
 
     &-subtitle {
@@ -803,6 +879,11 @@ body {
       font-size: 18px;
       line-height: 133%;
       color: $dark-900;
+      margin-bottom: 0;
+      @media (max-width: 768px) {
+        font-size: 16px;
+
+      }
     }
   }
 }
@@ -818,12 +899,22 @@ body {
 
   &__row {
     margin-bottom: 40px;
+    @media (max-width: 992px) {
+      margin-bottom: 0px;
+    }
   }
   &__left {
     padding-right: 0;
+    @media (max-width: 992px) {
+      padding-right: calc(var(--bs-gutter-x) * .5);
+    }
+
   }
   &__right {
     padding-left: 24px;
+    @media (max-width: 992px) {
+      padding-left: calc(var(--bs-gutter-x) * .5);
+    }
   }
 
   &__card {
@@ -840,6 +931,10 @@ body {
     line-height: 129%;
     color: $dark-000;
     margin-bottom: 24px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
   }
 
   &__description {
@@ -848,6 +943,10 @@ body {
     line-height: 140%;
     color:$dark-000;
     margin-bottom: 24px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
   }
 
     &__button {
@@ -862,6 +961,10 @@ body {
       font-size: 16px;
       line-height: 137%;
       color: $blue-600;
+      @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+      }
 
       &:hover {
         background-color: transparent;
@@ -873,10 +976,16 @@ body {
       }
     }
 
-  &__image img {
-    border-radius: 16px;
-    width: 100%;
-    margin-top: 16px;
+  &__image {
+    @media (max-width: 992px) {
+      margin-bottom: 16px;
+    }
+
+    img {
+      border-radius: 16px;
+      width: 100%;
+      margin-top: 16px;
+    }
   }
 
   &__list {
@@ -887,6 +996,9 @@ body {
   }
   &__features {
     padding-right: 24px;
+    @media (max-width: 992px) {
+      padding-right: calc(var(--bs-gutter-x) * .5);
+    }
   }
   &__item,
   &__feature {
@@ -900,11 +1012,18 @@ body {
     font-size: 16px;
     line-height: 137%;
     color:$dark-800;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      padding: 24px 12px;
+    }
     strong {
       font-weight: 500;
       font-size: 18px;
       line-height: 133%;
       color: $dark-900;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
     p {
       margin-bottom: 0;}
@@ -930,6 +1049,9 @@ body {
   }
   &__notes {
     padding-left: 0;
+    @media (max-width: 992px) {
+      padding-left: calc(var(--bs-gutter-x) * .5);
+    }
   }
   &__note {
     font-weight: 600;
@@ -940,32 +1062,24 @@ body {
     background: $blue-600;
 
     padding: 32px 24px;
+    @media (max-width: 992px) {
+      margin-top: 0;
+    }
     p {
       margin-bottom: 10px;
     }
   }
 }
 
-// Адаптивность
-@media (max-width: 992px) {
-  .advantages {
-    &__title {
-      font-size: 1.5rem;
-    }
-    &__row {
-      margin-bottom: 20px;
-    }
-    &__note {
-      margin-top: 20px;
-    }
-  }
-}
 
 //Секуия move-info
 
 .move-info {
   background: $blue-200;
   padding: 64px 0;
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   &__container {
     max-width: 1280px;
@@ -977,6 +1091,10 @@ body {
     line-height: 129%;
     color: $dark-900;
     margin-bottom: 16px;
+    @media (max-width: 768px) {
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
   }
 
   &__text {
@@ -985,6 +1103,14 @@ body {
     line-height: 133%;
     color: $dark-900;
     margin-bottom: 66px;
+    @media (max-width: 992px) {
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
   }
 
   &__button {
@@ -999,6 +1125,15 @@ body {
     font-size: 16px;
     line-height: 137%;
     color: $dark-000;
+    @media (max-width: 992px) {
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
 
     &:hover {
       background :$dark-000;
@@ -1014,6 +1149,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
   }
 
   &__step {
@@ -1023,6 +1161,9 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 16px;
+    @media (max-width: 768px) {
+      padding: 24px 12px;
+    }
   }
 
   &__number {
@@ -1037,26 +1178,12 @@ body {
     font-size: 18px;
     line-height: 140%;
     color: $dark-900;
-  }
-
-  @media (max-width: 991.98px) {
-    &__button {
-      width: 100%;
-      justify-content: center;
-    }
-
-    &__title {
-      font-size: 1.5rem;
-    }
-
-    &__text {
-      font-size: 0.95rem;
-    }
-
-    &__steps {
-      margin-top: 30px;
+    @media (max-width: 768px) {
+      font-size: 16px;
     }
   }
+
+
 }
 
 
@@ -1064,6 +1191,9 @@ body {
 .order {
   background: $-blue-bg;
   padding: 64px 0;
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   &__container {
     max-width: 1280px;
@@ -1074,6 +1204,12 @@ body {
     font-size: 28px;
     line-height: 129%;
     color:$dark-900;
+    @media (max-width: 992px) {
+      margin-bottom: 12px;
+    }
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
   }
 
   &__subtitle {
@@ -1081,12 +1217,21 @@ body {
     font-size: 18px;
     line-height: 133%;
     color: $dark-900;
+    @media (max-width: 992px) {
+      margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   &__steps {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
   }
 
   &__step {
@@ -1095,6 +1240,10 @@ body {
     padding: 24px;
     display: flex;
     align-items: flex-start;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 24px 12px;
+    }
 
   }
 
@@ -1112,6 +1261,12 @@ body {
     font-size: 24px;
     line-height: 117%;
     color: $dark-000;
+    @media (max-width: 768px) {
+      margin-bottom: 12px;
+      width: 48px;
+      height: 48px;
+      font-size: 18px;
+    }
   }
 
   &__description {
@@ -1119,33 +1274,29 @@ body {
     font-size: 18px;
     line-height: 133%;
     color: $dark-900;
-  }
-
-  // Адаптивность
-  @media (max-width: 768px) {
-    &__title {
-      font-size: 1.5rem;
-    }
-
-    &__subtitle {
-      font-size: 0.95rem;
-    }
-
-    &__description {
-      font-size: 0.95rem;
+    @media (max-width: 768px) {
+      font-size: 16px;
     }
   }
+
+
 }
 //Секция Cost
 .cost {
   background: $-blue-bg;
   padding: 0px 0 64px;
+  @media (max-width: 768px) {
+    padding: 0px 0 40px;
+  }
    &__container {
      max-width: 1280px;
    }
   &__textcard {
     padding-right: 24px;
     height: 100%;
+    @media (max-width: 992px) {
+      padding-right:0px;
+    }
   }
 
   &__title {
@@ -1154,6 +1305,10 @@ body {
     line-height: 129%;
     color: $dark-900;
     margin-bottom: 16px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
 
   }
 
@@ -1163,6 +1318,10 @@ body {
     line-height: 133%;
     color: $dark-900;
     margin-bottom: 16px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
   }
 
   /* список с синими точками */
@@ -1178,6 +1337,10 @@ body {
       font-size: 18px;
       line-height: 133%;
       color: $dark-900;
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
       &:before {
         content: "";
         position: absolute;
@@ -1197,6 +1360,11 @@ body {
     border-radius: 8px;
     padding: 16px;
     font-weight: 600;
+    @media (max-width: 768px) {
+      margin-top: 16px;
+      width: 100%;
+      justify-content: center;
+    }
     &:hover { background: #0b52a8; border-color:#0b52a8; }
   }
 
@@ -1264,9 +1432,18 @@ body {
     align-items: center;
     justify-content: center;
     transition: .2s ease;
+    @media (max-width: 768px) {
+      width: 40px; height: 40px;
+    }
     &:hover { background: #0b52a8; }
-    &--prev { left: 24px; }
-    &--next { right: 24px; }
+    &--prev { left: 24px;
+      @media (max-width: 768px) {
+        left: 12px;
+      }}
+    &--next { right: 24px;
+      @media (max-width: 768px) {
+        right: 12px;
+      }}
   }
 }
 
@@ -1285,6 +1462,10 @@ body {
     font-size: 28px;
     line-height: 129%;
     color: $dark-900;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin: 0 0 8px;
+    }
   }
 
   &__lead {
@@ -1293,6 +1474,10 @@ body {
     line-height: 140%;
     color: $dark-900;
     margin-bottom: 24px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
   }
 
   /* стрелки */
@@ -1300,6 +1485,12 @@ body {
     display: flex;
     gap: 12px;
     margin-bottom: 24px;
+    @media (max-width: 768px) {
+     bottom: -77px;
+      position: absolute;
+      width: 93%;
+      justify-content: space-between;
+    }
   }
   &__arrow {
     width: 48px;
@@ -1312,6 +1503,11 @@ body {
     justify-content: center;
     color: #fff;
     transition: .2s ease;
+    @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
+
     &:hover { background: #0b52a8; }
   }
 }
@@ -1326,6 +1522,7 @@ body {
   display: flex;
   flex-direction: column;
 
+
   &__head {
     display: flex;
     align-items: center;
@@ -1339,6 +1536,10 @@ body {
     line-height: 137%;
     color:$dark-800;
     margin-bottom: 16px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
   }
 
   /* заглушка иконки "лайк" */
@@ -1352,6 +1553,9 @@ body {
     line-height: 133%;
     color: $dark-900;
     margin-bottom: 16px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   &__text {
@@ -1364,6 +1568,10 @@ body {
     -webkit-line-clamp: 7; /* ограничиваем 7 строками */
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
   }
 
   &__more {
@@ -1372,6 +1580,10 @@ body {
     line-height: 137%;
     color:$dark-800;
     text-decoration: none;
+    @media (max-width: 768px) {
+      font-size: 14px;
+
+    }
     &:hover { text-decoration: underline; }
   }
 
@@ -1430,6 +1642,9 @@ body {
 .faq {
   background: $-blue-bg;
   padding: 64px 0;
+  @media (max-width: 768px) {
+    padding: 92px 0 40px;
+  }
 
   &__container {
     max-width: 1280px;
@@ -1441,12 +1656,19 @@ body {
     line-height: 129%;
     color:$dark-900;
     margin-bottom: 24px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
   }
 
   &__panel {
     background:$dark-000;
     border-radius: 16px;
     padding: 24px;
+    @media (max-width: 768px) {
+      padding: 24px 12px;
+    }
   }
 
   /* Список */
@@ -1486,6 +1708,9 @@ body {
     font-size: 18px;
     line-height: 133%;
     color: $dark-900;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
 
     /* убираем фокус Bootstrap */
     &:focus {
@@ -1511,6 +1736,9 @@ body {
     font-size: 16px;
     line-height: 137%;
     color: $dark-800;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -1535,6 +1763,11 @@ body {
     line-height: 129%;
     color: $dark-000;
     margin: 0 0 12px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin: 0 0 8px;
+
+    }
   }
 
   &__lead {
@@ -1671,7 +1904,10 @@ body {
   &__illustration {
     margin-top: 85px;
     display: flex;
-    justify-content: flex-end;
+    @media (max-width:992px ){
+     justify-content: center;
+
+    }
 
   }
 }

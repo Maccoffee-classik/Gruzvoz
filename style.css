@@ -88,7 +88,7 @@ body {
 }
 @media (max-width: 768px) {
   .hero-section__inner {
-    padding: 12px 20px 146px;
+    padding: 12px 12px 146px;
   }
 }
 
@@ -109,6 +109,7 @@ body {
   padding: 16px;
   font-weight: 600;
   color: #fff;
+  font-size: 16px;
 }
 .hero-content .hero__btn:hover {
   background: #0b52a8;
@@ -366,6 +367,11 @@ body {
 .steps {
   padding: 64px 0;
 }
+@media (max-width: 767.98px) {
+  .steps {
+    padding: 40px 0;
+  }
+}
 .steps__container {
   max-width: 1280px;
 }
@@ -404,6 +410,12 @@ body {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+  .steps__title {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
 }
 .steps__row {
   display: flex;
@@ -457,6 +469,13 @@ body {
   color: #181b21;
   margin-bottom: auto;
 }
+@media (max-width: 768px) {
+  .steps__number {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
 .steps__icon {
   text-align: center;
   display: flex;
@@ -486,16 +505,24 @@ body {
     max-width: 100%;
   }
   .steps__item {
-    flex-direction: row;
-    justify-content: flex-start;
+    position: relative;
     gap: 12px;
     text-align: left;
+    justify-content: center;
+    min-height: 96px;
+    padding: 24px 12px;
   }
   .steps__number {
     font-size: 16px;
   }
   .steps__text {
     font-size: 14px;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 60px;
+    margin-right: 55px;
+    position: absolute;
+    top: 24px;
   }
 }
 
@@ -1753,6 +1780,11 @@ body {
   border-radius: 16px;
   padding: 32px;
 }
+@media (max-width: 768px) {
+  .ready__card {
+    padding: 24px 12px;
+  }
+}
 .ready__title {
   font-weight: 700;
   font-size: 28px;
@@ -1833,6 +1865,11 @@ body {
   /* псевдоэлемент — сама галочка */
   /* отмеченное состояние */
 }
+@media (max-width: 768px) {
+  .ready .ready__check {
+    margin-right: 0px;
+  }
+}
 .ready .ready__check:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
@@ -1862,6 +1899,11 @@ body {
 .ready__check-label {
   color: #b7d7fd;
 }
+@media (max-width: 768px) {
+  .ready__check-label {
+    font-size: 14px;
+  }
+}
 .ready__check-label a {
   color: white;
   text-decoration: none;
@@ -1884,6 +1926,13 @@ body {
   line-height: 137%;
   color: #0d5dbc;
 }
+@media (max-width: 768px) {
+  .ready__button {
+    margin-top: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+}
 .ready__button:hover {
   background-color: transparent;
   color: #fff;
@@ -1899,12 +1948,18 @@ body {
 @media (max-width: 992px) {
   .ready__illustration {
     justify-content: center;
+    margin-top: -15px;
   }
 }
 
 .contact-map {
   background: #f2f5fa;
   padding: 64px 0;
+}
+@media (max-width: 768px) {
+  .contact-map {
+    padding: 40px 0;
+  }
 }
 .contact-map__container {
   max-width: 1280px;
@@ -1916,6 +1971,16 @@ body {
   background-color: #fff;
   border-radius: 16px;
 }
+@media (max-width: 992px) {
+  .contact-map__info {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-map__info {
+    padding: 24px 12px;
+  }
+}
 .contact-map__title {
   font-weight: 700;
   font-size: 28px;
@@ -1923,11 +1988,23 @@ body {
   color: #181b21;
   margin-bottom: 32px;
 }
+@media (max-width: 768px) {
+  .contact-map__title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+}
 .contact-map__text {
   font-weight: 500;
   font-size: 18px;
   line-height: 133%;
   color: #181b21;
+}
+@media (max-width: 768px) {
+  .contact-map__text {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
 }
 .contact-map__address {
   font-weight: 700;
@@ -1935,11 +2012,21 @@ body {
   line-height: 140%;
   color: #181b21;
 }
+@media (max-width: 768px) {
+  .contact-map__address {
+    font-size: 18px;
+  }
+}
 .contact-map__hours {
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
   color: #181b21;
+}
+@media (max-width: 768px) {
+  .contact-map__hours {
+    font-size: 18px;
+  }
 }
 .contact-map__buttons .contact-map__btn-1 {
   background: #047ae9;
@@ -1952,6 +2039,12 @@ body {
   line-height: 137%;
   color: #fff;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .contact-map__buttons .contact-map__btn-1 {
+    width: 100%;
+    justify-content: center;
+  }
 }
 .contact-map__buttons .contact-map__btn-1:hover {
   background: #fff;
@@ -1973,6 +2066,12 @@ body {
   color: #0d5dbc;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .contact-map__buttons .contact-map__btn-2 {
+    width: 100%;
+    justify-content: center;
+  }
+}
 .contact-map__buttons .contact-map__btn-2:hover {
   background: #047ae9;
   color: #fff;
@@ -1985,29 +2084,15 @@ body {
   margin-left: 12px;
   border-radius: 16px;
 }
+@media (max-width: 992px) {
+  .contact-map__map {
+    margin-left: 0px;
+  }
+}
 .contact-map__map iframe {
   width: 100%;
   border-radius: 20px;
   object-fit: cover;
-}
-@media (max-width: 991.98px) {
-  .contact-map__title {
-    font-size: 1.5rem;
-  }
-  .contact-map__info {
-    text-align: center;
-  }
-  .contact-map__buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-map__buttons .contact-map__btn {
-    width: 100%;
-    justify-content: center;
-  }
-  .contact-map__map {
-    margin-top: 30px;
-  }
 }
 
 .footer {
@@ -2059,17 +2144,32 @@ body {
   line-height: 140%;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .footer__contacts-block .footer__phone {
+    font-size: 18px;
+  }
+}
 .footer__contacts-block .footer__email {
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .footer__contacts-block .footer__email {
+    font-size: 18px;
+  }
+}
 .footer__details {
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .footer__details {
+    font-size: 12px;
+  }
 }
 .footer__details p {
   margin-bottom: 5px;
@@ -2081,12 +2181,22 @@ body {
   height: 100%;
   align-items: flex-end;
 }
+@media (max-width: 768px) {
+  .footer__bottom {
+    margin-top: 24px;
+  }
+}
 .footer__bottom .footer__policy {
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
   color: #fff;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .footer__bottom .footer__policy {
+    font-size: 12px;
+  }
 }
 .footer__bottom .footer__policy:hover {
   text-decoration: underline;

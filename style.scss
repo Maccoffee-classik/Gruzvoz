@@ -110,7 +110,7 @@ body {
     padding: 48px;
     overflow: hidden;
     @media (max-width: 768px) {
-      padding: 12px 20px 146px;
+      padding: 12px 12px 146px;
     }
   }
 
@@ -133,6 +133,7 @@ body {
     padding: 16px;
     font-weight: 600;
     color: $dark-000;
+    font-size: 16px;
     &:hover { background: #0b52a8; border-color:#0b52a8; }
     span {
       margin-right: 10px;
@@ -377,6 +378,9 @@ body {
 //секция how we work
 .steps {
   padding: 64px 0;
+  @media (max-width: 767.98px) {
+    padding: 40px 0;
+  }
   &__container {
     max-width: 1280px;
   }
@@ -391,6 +395,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    @media (max-width:768px ){
+
+
+    }
 
   }
 
@@ -419,6 +427,10 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 40px;
+    @media (max-width: 767.98px) {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
   }
 
   &__row {
@@ -454,6 +466,10 @@ body {
     @media (max-width: 1200px) {
       min-width: auto;
     }
+    @media (max-width:768px ){
+
+
+    }
 
   }
 
@@ -472,6 +488,11 @@ body {
     line-height: 117%;
     color: $dark-900;
     margin-bottom: auto;
+    @media (max-width:768px ){
+      width: 48px;
+      height: 48px;
+      font-size: 18px;
+    }
 
 
 
@@ -515,10 +536,13 @@ body {
     }
 
     &__item {
-      flex-direction: row;
-      justify-content: flex-start;
+      position: relative;
+
       gap: 12px;
       text-align: left;
+      justify-content: center;
+      min-height: 96px;
+      padding: 24px 12px;
     }
 
     &__number {
@@ -527,6 +551,12 @@ body {
 
     &__text {
       font-size: 14px;
+      justify-content: flex-start;
+      display: flex;
+      margin-left: 60px;
+      margin-right: 55px;
+      position: absolute;
+      top: 24px;
     }
   }
 }
@@ -1755,6 +1785,10 @@ body {
     background: $blue-600;
     border-radius: 16px;
     padding: 32px;
+    @media (max-width: 768px) {
+      padding: 24px 12px;
+
+    }
   }
 
   &__title {
@@ -1834,7 +1868,10 @@ body {
     margin-right: 8px;
     vertical-align: text-bottom;
     transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
+    @media (max-width: 768px) {
+      margin-right: 0px;
 
+    }
     /* доступность при фокусе с клавиатуры */
     &:focus-visible {
       outline: 2px solid #fff;
@@ -1868,6 +1905,9 @@ body {
   &__check { accent-color: white; }
   &__check-label {
     color: $blue-300;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
     a { color: white; text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -1890,6 +1930,11 @@ body {
     font-size: 16px;
     line-height: 137%;
     color: $blue-600;
+    @media (max-width: 768px) {
+      margin-top: 16px;
+      width: 100%;
+      justify-content: center;
+    }
 
     &:hover {
       background-color: transparent;
@@ -1906,6 +1951,7 @@ body {
     display: flex;
     @media (max-width:992px ){
      justify-content: center;
+      margin-top: -15px;
 
     }
 
@@ -1918,6 +1964,10 @@ body {
 .contact-map {
   background: $-blue-bg;
   padding: 64px 0;
+  @media (max-width:768px ){
+    padding: 40px 0;
+
+  }
 
   &__container {
     max-width: 1280px;
@@ -1929,6 +1979,14 @@ body {
     margin-right: 12px;
     background-color: $dark-000;
     border-radius: 16px;
+    @media (max-width:992px ){
+      margin-right: 0px;
+
+    }
+    @media (max-width:768px ){
+      padding: 24px 12px;
+
+    }
 
   }
 
@@ -1938,6 +1996,10 @@ body {
     line-height: 129%;
     color: $dark-900;
     margin-bottom: 32px;
+    @media (max-width:768px ){
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
   }
 
   &__text {
@@ -1945,6 +2007,10 @@ body {
     font-size: 18px;
     line-height: 133%;
     color: $dark-900;
+    @media (max-width:768px ){
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
   }
 
   &__address {
@@ -1952,6 +2018,10 @@ body {
     font-size: 20px;
     line-height: 140%;
     color: $dark-900;
+    @media (max-width:768px ){
+      font-size: 18px;
+
+    }
   }
 
   &__hours {
@@ -1959,6 +2029,10 @@ body {
     font-size: 20px;
     line-height: 140%;
     color: $dark-900;
+    @media (max-width:768px ){
+      font-size: 18px;
+
+    }
   }
 
   &__buttons {
@@ -1973,6 +2047,11 @@ body {
       line-height: 137%;
       color: $dark-000;
       text-decoration: none;
+      @media (max-width:768px ){
+        width: 100%;
+        justify-content: center;
+
+      }
 
       &:hover {
         background :$dark-000;
@@ -1994,6 +2073,11 @@ body {
       line-height: 137%;
       color: $blue-600;
       text-decoration: none;
+      @media (max-width:768px ){
+        width: 100%;
+        justify-content: center;
+
+      }
 
       &:hover {
         background: $blue-500;
@@ -2009,6 +2093,10 @@ body {
   &__map {
     margin-left: 12px;
     border-radius: 16px;
+    @media (max-width:992px ){
+      margin-left: 0px;
+
+    }
    iframe {
       width: 100%;
       border-radius: 20px;
@@ -2016,31 +2104,7 @@ body {
     }
   }
 
-  // Адаптив
-  @media (max-width: 991.98px) {
-    &__title {
-      font-size: 1.5rem;
-    }
 
-    &__info {
-      text-align: center;
-    }
-
-    &__buttons {
-      flex-direction: column;
-      align-items: center;
-
-      .contact-map__btn {
-
-        width: 100%;
-        justify-content: center;
-      }
-    }
-
-    &__map {
-      margin-top: 30px;
-    }
-  }
 }
 
 //Footer
@@ -2097,12 +2161,20 @@ body {
       font-size: 20px;
       line-height: 140%;
       color: $dark-000;
+      @media (max-width:768px ){
+        font-size: 18px;
+
+      }
     }
     .footer__email {
       font-weight: 700;
       font-size: 20px;
       line-height: 140%;
       color: $dark-000;
+      @media (max-width:768px ){
+        font-size: 18px;
+
+      }
     }
   }
 
@@ -2111,6 +2183,10 @@ body {
     font-size: 14px;
     line-height: 129%;
     color: $dark-000;
+    @media (max-width:768px ){
+      font-size: 12px;
+
+    }
     p {
       margin-bottom: 5px;
     }
@@ -2122,12 +2198,19 @@ body {
   &__bottom {
     height: 100%;
     align-items: flex-end;
+    @media (max-width:768px ){
+      margin-top: 24px;
+    }
     .footer__policy {
       font-weight: 400;
       font-size: 14px;
       line-height: 129%;
       color: $dark-000;
       text-decoration:none;
+      @media (max-width:768px ){
+        font-size: 12px;
+
+      }
       &:hover {
         text-decoration: underline;
       }

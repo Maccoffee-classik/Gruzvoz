@@ -12,6 +12,11 @@ body {
 .header .logo-gruzovoz-header {
   max-width: 143px;
 }
+@media (max-width: 992px) {
+  .header__container {
+    max-width: 990px;
+  }
+}
 .header .nav-link {
   font-weight: 500;
   font-size: 16px;
@@ -81,20 +86,42 @@ body {
   padding: 48px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .hero-section__inner {
+    padding: 12px 20px 146px;
+  }
+}
 
 .hero-content {
   border-radius: 16px;
   background-color: #fff;
   padding: 32px;
 }
-.hero-content .btn-primary {
-  font-weight: 600 !important;
-  font-size: 16px;
-  border-radius: 8px !important;
-  padding: 16px;
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 24px 12px;
+  }
 }
-.hero-content .btn-primary span {
+.hero-content .hero__btn {
+  background: #047ae9;
+  border: 1px solid #0d5dbc;
+  border-radius: 8px;
+  padding: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+.hero-content .hero__btn:hover {
+  background: #0b52a8;
+  border-color: #0b52a8;
+}
+.hero-content .hero__btn span {
   margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .hero-content .hero__btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .hero-section h1 {
@@ -102,6 +129,18 @@ body {
   font-size: 52px;
   line-height: 119%;
   color: #181b21;
+  margin-bottom: 16px;
+}
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 32px;
+  }
 }
 
 .hero-section h2 {
@@ -109,8 +148,18 @@ body {
   font-size: 24px;
   line-height: 117%;
   color: #181b21;
-  margin-top: 16px;
   margin-bottom: 24px;
+}
+@media (max-width: 992px) {
+  .hero-section h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
 }
 
 .hero-section .hero-description {
@@ -121,6 +170,12 @@ body {
   color: #737d86;
   margin-bottom: 32px;
 }
+@media (max-width: 768px) {
+  .hero-section .hero-description {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
 
 .consultation {
   /* Светлый фон для всей секции */
@@ -130,6 +185,11 @@ body {
   /* Карточки преимуществ (левая колонка) */
   /* Блок формы (правая колонка) */
   /* Кнопка отправки заявки */
+}
+@media (max-width: 768px) {
+  .consultation {
+    padding: 40px 0;
+  }
 }
 .consultation__container {
   max-width: 1280px;
@@ -143,6 +203,19 @@ body {
   height: 100%;
   min-height: 200px;
 }
+@media (max-width: 992px) {
+  .consultation__benefit {
+    padding: 32px 24px;
+  }
+}
+@media (max-width: 768px) {
+  .consultation__benefit {
+    padding: 24px 12px;
+    display: flex;
+    align-items: center;
+    min-height: auto;
+  }
+}
 .consultation__benefit-icon {
   border-radius: 8px;
   padding: 10px 12px;
@@ -151,6 +224,13 @@ body {
   display: block;
   background: #7fb4f4; /* синий фон для иконки-заглушки */
 }
+@media (max-width: 768px) {
+  .consultation__benefit-icon {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+  }
+}
 .consultation__benefit-text {
   font-weight: 600;
   font-size: 18px;
@@ -158,11 +238,23 @@ body {
   color: #181b21;
   margin-top: 24px;
 }
+@media (max-width: 768px) {
+  .consultation__benefit-text {
+    margin-top: 0px;
+    margin-left: 12px;
+    font-size: 16px;
+  }
+}
 .consultation__form-inner {
   background: #dcecfb;
   border-radius: 16px;
   padding: 32px;
   height: 100%;
+}
+@media (max-width: 768px) {
+  .consultation__form-inner {
+    padding: 24px 12px;
+  }
 }
 .consultation__title {
   font-weight: 700;
@@ -171,12 +263,22 @@ body {
   color: #181b21;
   margin-bottom: 12px;
 }
+@media (max-width: 768px) {
+  .consultation__title {
+    font-size: 22px;
+  }
+}
 .consultation__description {
   font-weight: 500;
   font-size: 16px;
   line-height: 137%;
   color: #181b21;
   margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .consultation__description {
+    font-size: 14px;
+  }
 }
 .consultation .form-floating {
   margin-bottom: 12px;
@@ -246,6 +348,12 @@ body {
   line-height: 137%;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .consultation__submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
 .consultation__submit-btn:hover {
   background: #fff;
   color: #181b21;
@@ -258,7 +366,11 @@ body {
 .steps {
   padding: 64px 0;
 }
+.steps__container {
+  max-width: 1280px;
+}
 .steps__item-wrapper {
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -306,6 +418,7 @@ body {
   justify-content: center;
 }
 .steps__item {
+  width: 100%;
   background: #f2f5fa;
   border-radius: 16px;
   padding: 32px 24px;
@@ -895,6 +1008,9 @@ body {
   /* SLIDER */
   /* стрелки поверх слайдера */
 }
+.cost__container {
+  max-width: 1280px;
+}
 .cost__textcard {
   padding-right: 24px;
   height: 100%;
@@ -1022,6 +1138,9 @@ body {
   background: #f2f5fa;
   padding: 0px 0 0px;
   /* стрелки */
+}
+.reviews__container {
+  max-width: 1280px;
 }
 .reviews__title {
   margin: 0 0 12px;
@@ -1238,6 +1357,9 @@ body {
   /* чекбокс и политика */
   /* Кнопка */
   /* Иллюстрация */
+}
+.ready__container {
+  max-width: 1280px;
 }
 .ready__card {
   background: #0d5dbc;
@@ -1603,22 +1725,6 @@ body {
   }
 }
 
-@media (max-width: 767.98px) {
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-  .hero-section h2 {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 992px) {
-  .hero-section h1 {
-    font-size: 3rem;
-  }
-  .hero-section h2 {
-    font-size: 2rem;
-  }
-}
 @media (min-width: 1400px) {
   .container {
     max-width: 1280px;

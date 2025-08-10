@@ -24,6 +24,12 @@ body {
   .logo-gruzovoz-header {
     max-width: 143px;
   }
+  &__container {
+
+    @media (max-width: 992px) {
+      max-width: 990px;
+    }
+  }
   .nav-link {
     font-weight: 500;
     font-size: 16px;
@@ -103,6 +109,9 @@ body {
     border-radius: 16px;
     padding: 48px;
     overflow: hidden;
+    @media (max-width: 768px) {
+      padding: 12px 20px 146px;
+    }
   }
 
 }
@@ -112,14 +121,25 @@ body {
   border-radius: 16px;
   background-color: #fff;
   padding: 32px;
+  @media (max-width: 768px) {
+    padding: 24px 12px;
+  }
 
-  .btn-primary {
-    font-weight: 600!important;
-    font-size: 16px;
-    border-radius: 8px!important;
+
+  .hero__btn {
+    background: $blue-500;
+    border: 1px solid #0d5dbc;
+    border-radius: 8px;
     padding: 16px;
+    font-weight: 600;
+    color: $dark-000;
+    &:hover { background: #0b52a8; border-color:#0b52a8; }
     span {
       margin-right: 10px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
     }
   }
 }
@@ -130,6 +150,14 @@ body {
   font-size: 52px;
   line-height: 119%;
   color: $dark-900;
+  margin-bottom: 16px;
+  @media (max-width: 992px) {
+    font-size: 42px;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 
 }
 .hero-section h2 {
@@ -137,8 +165,15 @@ body {
   font-size: 24px;
   line-height: 117%;
   color: $dark-900;
-  margin-top: 16px;
   margin-bottom: 24px;
+  @media (max-width: 992px) {
+    font-size: 24px;
+
+  }
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
 }
 .hero-section .hero-description {
   font-style: italic;
@@ -147,6 +182,10 @@ body {
   line-height: 137%;
   color: $dark-500;
   margin-bottom: 32px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
 }
 
 //Секция Consultation
@@ -154,6 +193,9 @@ body {
   /* Светлый фон для всей секции */
   background: 	$-blue-bg;
   padding: 64px 0;
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
   /* Контейнер ограниченной ширины (макс. 1280px на широком экране) */
   &__container {
     max-width: 1280px;
@@ -167,6 +209,17 @@ body {
     padding: 24px;
     height: 100%;
     min-height: 200px;
+    @media (max-width: 992px) {
+      padding: 32px 24px;
+
+    }
+    @media (max-width: 768px) {
+      padding: 24px 12px;
+      display: flex;
+      align-items: center;
+      min-height: auto;
+
+    }
 
     &-icon {
       border-radius: 8px;
@@ -175,6 +228,12 @@ body {
       height: 56px;
       display: block;
       background: $blue-400;/* синий фон для иконки-заглушки */
+      @media (max-width: 768px) {
+        width: 48px;
+        height: 48px;
+        padding: 8px;
+
+      }
 
     }
     &-text {
@@ -183,6 +242,12 @@ body {
       line-height: 133%;
       color: $dark-900;
       margin-top: 24px;
+      @media (max-width: 768px) {
+        margin-top: 0px;
+        margin-left: 12px;
+        font-size: 16px;
+
+      }
     }
   }
   /* Блок формы (правая колонка) */
@@ -194,6 +259,9 @@ body {
     border-radius: 16px;
     padding: 32px;
     height: 100%;
+    @media (max-width: 768px) {
+      padding: 24px 12px;
+    }
   }
   &__title {
     font-weight: 700;
@@ -201,6 +269,9 @@ body {
     line-height: 129%;
     color: $dark-900;
     margin-bottom: 12px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
   }
   &__description {
     font-weight: 500;
@@ -208,6 +279,9 @@ body {
     line-height: 137%;
     color: $dark-900;
     margin-bottom: 24px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
   .form-floating {
     margin-bottom: 12px;}
@@ -283,6 +357,10 @@ body {
     font-size: 16px;
     line-height: 137%;
     color: $dark-000;
+    @media (max-width: 768px) {
+     width: 100%;
+      justify-content: center;
+    }
 
     &:hover {
       background :$dark-000;
@@ -299,7 +377,11 @@ body {
 //секция how we work
 .steps {
   padding: 64px 0;
+  &__container {
+    max-width: 1280px;
+  }
   &__item-wrapper {
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -354,6 +436,7 @@ body {
   }
 
   &__item {
+    width: 100%;
     background:$-blue-bg;
     border-radius: 16px;
     padding: 32px 24px;
@@ -1057,7 +1140,9 @@ body {
 .cost {
   background: $-blue-bg;
   padding: 0px 0 64px;
-
+   &__container {
+     max-width: 1280px;
+   }
   &__textcard {
     padding-right: 24px;
     height: 100%;
@@ -1190,6 +1275,9 @@ body {
 .reviews {
   background: $-blue-bg;
   padding: 0px 0 0px;
+  &__container {
+    max-width: 1280px;
+  }
 
   &__title {
     margin: 0 0 12px;
@@ -1431,6 +1519,9 @@ body {
 .ready {
   background:  $-blue-bg;
   padding: 0px;
+  &__container {
+    max-width: 1280px;
+  }
 
   &__card {
     background: $blue-600;
@@ -1845,15 +1936,6 @@ body {
   }
 }
 
-// Адаптивные размеры текста (пример)
-@media (max-width: 767.98px) {
-  .hero-section h1 { font-size: 2rem; }
-  .hero-section h2 { font-size: 1.5rem; }
-}
-@media (min-width: 992px) {
-  .hero-section h1 { font-size: 3rem; }
-  .hero-section h2 { font-size: 2rem; }
-}
 
 // Ограничение ширины контейнера на больших экранах (макс 1280px)
 @media (min-width: 1400px) {

@@ -13,6 +13,23 @@ $dark-800: #444c53;
 $dark-500: #737d86;
 $dark-000: #fff;
 $dark-400: #949da4;
+
+// Кастомные order для всех брейкпоинтов
+@for $i from 1 through 10 {
+  .order-xs-#{$i} { order: $i !important; }
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 through 10 {
+    .order-md-#{$i} { order: $i !important; }
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through 10 {
+    .order-lg-#{$i} { order: $i !important; }
+  }
+}
 // Базовые стили
 body {
   font-family: 'Raleway', sans-serif;
@@ -47,6 +64,9 @@ body {
     border-radius: 8px!important;
     line-height: 137%;
     padding: 16px;
+    @media (max-width: 576px) {
+      padding: 10px;
+    }
 
   }
   .navbar {
@@ -65,23 +85,89 @@ body {
     line-height: 1;
   }
 
+  .custom-toggler {
+    border: 1px solid $blue-500;
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    background: $dark-000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 576px) {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+    }
+
+    /* Убираем стандартную иконку Bootstrap */
+    .navbar-toggler-icon {
+      background-image: none;
+    }
+    &:focus {
+      box-shadow:none;
+    }
+
+    &:hover {
+      background: var(--blue-500);
+
+      svg path {
+        stroke: #fff;
+      }
+    }
+  }
+
+
 
 
   // Offcanvas меню
   .offcanvas {
     width: 280px;
-    background: #fff;
-    padding: 1rem;
+    background: $-blue-bg;
+
 
     .offcanvas-header {
-      border-bottom: 1px solid #e9ecef;
-    }
 
+      .navbar-brand {
+        img {
+          width: 100px!important;
+        }
+      }
+
+    }
+    .custom-close {
+      border: 1px solid $blue-500;
+      border-radius: 6px;
+      padding: 0; // чтобы иконка ровно встала
+      width: 40px;
+      height: 40px;
+      background: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* Убираем дефолтный Bootstrap фон */
+      background-image: none;
+      opacity: 1;
+      &:focus {
+        box-shadow:none;
+      }
+
+      &:hover {
+        background:$blue-500;
+        svg path {
+          stroke: #fff;
+        }
+      }
+    }
     .nav-link {
       font-weight: 500;
       font-size: 16px;
       line-height: 137%;
-      padding: 0 28px!important;
+      padding: 12px 0!important;
       color: $dark-900;
       &:hover {
         color: #007bff;
@@ -435,9 +521,12 @@ body {
 
   &__row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     gap: 12px;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__col {
@@ -466,8 +555,8 @@ body {
     @media (max-width: 1200px) {
       min-width: auto;
     }
-    @media (max-width:768px ){
-
+    @media (max-width:992px ){
+      min-height: 188px;
 
     }
 
@@ -568,7 +657,7 @@ body {
   background-color:$-blue-bg;
   padding: 64px 0;
   @media (max-width: 992px) {
-    padding: 40px 0 64px;
+    padding: 40px 0 28px;
   }
 
   &__container {
@@ -2260,5 +2349,167 @@ body {
 @media (min-width: 1400px) {
   .container {
     max-width: 1280px;
+  }
+}
+
+/* ===== Callback Modal ===== */
+.callback-modal {
+  /* затемнение можно оставить дефолтное bootstrap; при желании слегка осветлить */
+  &__dialog {
+    max-width: 512px;           /* требование: максимум 512 на десктопе */
+    margin: 1rem auto;
+  }
+
+  &__content {
+    border: 0;
+    border-radius: 16px;
+
+    overflow: visible; /* чтобы кнопка закрытия могла выходить за пределы */
+    background: $-blue-bg;
+  }
+
+  &__inner {
+    padding: 32px 24px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 129%;
+    color: $dark-900;
+    margin-bottom: 12px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+
+  &__lead {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 137%;
+    color: $dark-900;
+    margin-bottom: 24px;
+  }
+
+  /* Поля */
+  &__input {
+    border: 1px solid $blue-200;
+    border-radius: 8px;
+    background: $dark-000;
+    color: #111827;
+    height: 48px;
+
+    &:focus {
+      border-color: #cfe2ff;
+      box-shadow: none;
+    }
+
+    &::placeholder { color: #94a3b8; }
+  }
+  .form-floating {
+    margin-bottom: 12px;
+  }
+
+  .form-floating > label {
+    color: #8ea1b5;
+  }
+
+  /* Чекбокс */
+  &__check {
+    width: 18px; height: 18px;
+    margin-top: 0.1rem;
+    border-radius: 4px;
+    accent-color: #0d6efd; /* быстрый кастом цвет галочки */
+  }
+
+  &__consent {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color:$dark-900;
+  }
+  &__policy {
+    color: $blue-600;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;}
+  }
+
+  /* Кнопка отправить */
+  &__submit {
+    background: $blue-500;
+    color: #fff;
+    border: 1px solid #0d6efd;
+    border-radius: 8px;
+    padding: 17px;
+    font-weight: 600;
+    transition: .2s ease;
+    width: 100%;
+    @media (max-width: 768px) {
+      position: fixed;
+      bottom: 32px;
+      z-index: 1056; // выше чем фон модалки
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 32px); // отступы как у модалки
+      max-width: 480px; // ч
+      }
+    &:hover {
+      background: #0b58d0;
+      border-color: #0b58d0;
+    }
+  }
+
+  /* Кнопка закрытия — синяя таблетка с крестиком */
+  &__close {
+    position: absolute;
+    right: -64px;
+    top: 0px;
+    width: 48px; height: 48px;
+    border-radius: 10px;
+    background: $blue-500;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $dark-000;
+
+    z-index: 2;
+
+    &:hover { background: #0b58d0; }
+  }
+
+  /* Мобайл: модалка во весь экран, крупная кнопка закрытия */
+  @media (max-width: 768px) {
+    .callback-modal .modal-body {
+      padding-bottom: 90px;  // высота кнопки + отступ
+    }
+    &__dialog {
+      max-width: 100%;
+      margin: 0;
+    }
+    &__content {
+      border-radius: 0;
+      min-height: 100vh;
+    }
+    &__inner {
+      padding: 24px 16px;
+    }
+    &__title {
+      font-size: 28px;   /* как в макете мобайл — крупнее */
+      margin-top: 56px;  /* чтобы не прилипало к кнопке закрытия */
+    }
+    &__lead { font-size: 18px; }
+
+    &__input { height: 56px; }
+
+    &__close {
+      padding: 16px;
+      right: 8px;
+      top: 12px;
+      width: 48px; height: 48px;
+      border-radius: 8px;
+      svg { width: 24px; height: 24px; }
+    }
   }
 }
